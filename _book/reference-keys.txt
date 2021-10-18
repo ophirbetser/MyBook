@@ -7,14 +7,11 @@
 פעולות-חשבון-בסיסיות
 קצת-לינארית
 דוגמא-נוסחת-השורשים
-url-your-book-url-like-httpsbookdown.orgyihuibookdown
 סוגי-משתנים-אבני-הבניין-שלנו
 משתנים
 integer
 numeric
 logical
 character
-r-markdown
-including-plots
 תנאים
 יש-אנחנו-יכולים-לשאול-את-המחשב-שאלות
