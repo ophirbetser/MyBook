@@ -57,7 +57,9 @@ R
 ```{r}
 v <- c(1L, 9L, 9L, 6L)
 class(v)
+```
 
+```{r}
 print(v / 2)
 print(class(v / 2))
 ```
