@@ -15,5 +15,3 @@ pre code {
 
 p, h1, h2, h3, h4 { text-align:right;}
 p, h1, h2, h3, h4 { direction: rtl;}
-li { direction: rtl;}
-li { text-align:right;}
