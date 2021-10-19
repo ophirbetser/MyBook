@@ -12,6 +12,9 @@
 integer
 numeric
 logical
+טבלאות-אמת
+all
+any
 character
 תנאים
 יש-אנחנו-יכולים-לשאול-את-המחשב-שאלות
@@ -28,3 +31,4 @@ apply
 איך-להוריד-ולטעון-ספריות
 base-r
 pacman
+url-your-book-url-like-httpsbookdown.orgyihuibookdown
