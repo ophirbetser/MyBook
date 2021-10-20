@@ -192,7 +192,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.3" data-path="פונקציות.html"><a href="פונקציות.html#כמה-דוגמאות"><i class="fa fa-check"></i><b>7.3</b> כמה דוגמאות</a>
 <ul>
 <li class="chapter" data-level="7.3.1" data-path="פונקציות.html"><a href="פונקציות.html#דוגמא-ראשונה---פונקציה-שמקבלת-משוואה-רבועית-ומחזירה-את-שורשיה"><i class="fa fa-check"></i><b>7.3.1</b> דוגמא ראשונה - פונקציה שמקבלת משוואה רבועית, ומחזירה את שורשיה</a></li>
-<li class="chapter" data-level="7.3.2" data-path="פונקציות.html"><a href="פונקציות.html#דוגמא-מספר-2"><i class="fa fa-check"></i><b>7.3.2</b> דוגמא מספר 2</a></li>
+<li class="chapter" data-level="7.3.2" data-path="פונקציות.html"><a href="פונקציות.html#דוגמא-שניה"><i class="fa fa-check"></i><b>7.3.2</b> דוגמא שניה</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="ספריות.html"><a href="ספריות.html"><i class="fa fa-check"></i><b>8</b> ספריות</a>
@@ -226,18 +226,67 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="לולאות" class="section level1" number="6">
 <h1><span class="header-section-number"> 6</span> לולאות</h1>
-<p>בלה בלה בלה</p>
+<p>בשונה משפות תכנות רבות אחרות,
+R
+היא שפה וקטורית,
+כלומר רוב הפעולות והפונקציות הבסיסיות בה מוכוונות לעבודה עם מערכים, או וקטורים מראש. העובדה ש
+R
+היא שפה וקטורית מורידה משמעותית את התלות שלנו בשימוש בלולאות, אך לעיתים עדיין אנו נרצה להשתמש בהם.</p>
+<p>ללואות הן דרך לומר למחשב לבצע מספר רב של פעמיים פעולה דומה, ללא צורך בלכתוב קוד נפרד לכל פעולה. ישנם מספר סוגי לולאות, העיקריות הן לולאות
+<code>for</code>
+אשר ישמשו אותנו לביצוע פעולה חזרתית מספר ידוע של פעמיים,
+ולולאות
+<code>while</code>
+אשר יבצעו עוד ועוד חזרות, עד אשר תנאי שנגדיר יתקיים.</p>
 <div id="for-loops" class="section level2" number="6.1">
 <h2><span class="header-section-number">6.1</span> for loops</h2>
-<p>בלה בלה בלה</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="לולאות.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>){</span>
+<span id="cb34-2"><a href="לולאות.html#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
+<span id="cb34-3"><a href="לולאות.html#cb34-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 5
+## [1] 6
+## [1] 7
+## [1] 8
+## [1] 9
+## [1] 10</code></pre>
 </div>
 <div id="while" class="section level2" number="6.2">
 <h2><span class="header-section-number">6.2</span> while</h2>
-<p>בלה בלה בלה</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="לולאות.html#cb36-1" aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb36-2"><a href="לולאות.html#cb36-2" aria-hidden="true" tabindex="-1"></a>i <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb36-3"><a href="לולאות.html#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span>(i <span class="sc">&lt;</span> n){</span>
+<span id="cb36-4"><a href="לולאות.html#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(i)</span>
+<span id="cb36-5"><a href="לולאות.html#cb36-5" aria-hidden="true" tabindex="-1"></a>  i <span class="ot">&lt;-</span> i <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb36-6"><a href="לולאות.html#cb36-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## [1] 1
+## [1] 2
+## [1] 3
+## [1] 4
+## [1] 5
+## [1] 6
+## [1] 7
+## [1] 8
+## [1] 9</code></pre>
 </div>
 <div id="apply" class="section level2" number="6.3">
 <h2><span class="header-section-number">6.3</span> apply</h2>
-<p>בלה בלה בלה</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="לולאות.html#cb38-1" aria-hidden="true" tabindex="-1"></a>matrix <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">24</span>, <span class="dv">6</span>, <span class="dv">4</span>)</span>
+<span id="cb38-2"><a href="לולאות.html#cb38-2" aria-hidden="true" tabindex="-1"></a>matrix</span></code></pre></div>
+<pre><code>##      [,1] [,2] [,3] [,4]
+## [1,]    1    7   13   19
+## [2,]    2    8   14   20
+## [3,]    3    9   15   21
+## [4,]    4   10   16   22
+## [5,]    5   11   17   23
+## [6,]    6   12   18   24</code></pre>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="לולאות.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(matrix, <span class="dv">1</span>, sum)</span></code></pre></div>
+<pre><code>## [1] 40 44 48 52 56 60</code></pre>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="לולאות.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(matrix, <span class="dv">2</span>, sum)</span></code></pre></div>
+<pre><code>## [1]  21  57  93 129</code></pre>
 
 </div>
 </div>
