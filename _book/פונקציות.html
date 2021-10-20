@@ -174,6 +174,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="תנאים.html"><a href="תנאים.html"><i class="fa fa-check"></i><b>5</b> תנאים</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="תנאים.html"><a href="תנאים.html#יש-אנחנו-יכולים-לשאול-את-המחשב-שאלות"><i class="fa fa-check"></i><b>5.1</b> יש! אנחנו יכולים לשאול את המחשב שאלות</a></li>
+<li class="chapter" data-level="5.2" data-path="תנאים.html"><a href="תנאים.html#וריאציות"><i class="fa fa-check"></i><b>5.2</b> וריאציות</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="תנאים.html"><a href="תנאים.html#ifelse"><i class="fa fa-check"></i><b>5.2.1</b> ifelse</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="לולאות.html"><a href="לולאות.html"><i class="fa fa-check"></i><b>6</b> לולאות</a>
 <ul>
@@ -185,7 +189,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="7.1" data-path="פונקציות.html"><a href="פונקציות.html#למה-לכתוב-פונקציות"><i class="fa fa-check"></i><b>7.1</b> למה לכתוב פונקציות?</a></li>
 <li class="chapter" data-level="7.2" data-path="פונקציות.html"><a href="פונקציות.html#מגניב-איך-עושים-את-זה"><i class="fa fa-check"></i><b>7.2</b> מגניב, איך עושים את זה?</a></li>
-<li class="chapter" data-level="7.3" data-path="פונקציות.html"><a href="פונקציות.html#כמה-דוגמאות"><i class="fa fa-check"></i><b>7.3</b> כמה דוגמאות</a></li>
+<li class="chapter" data-level="7.3" data-path="פונקציות.html"><a href="פונקציות.html#כמה-דוגמאות"><i class="fa fa-check"></i><b>7.3</b> כמה דוגמאות</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="פונקציות.html"><a href="פונקציות.html#דוגמא-ראשונה---פונקציה-שמקבלת-משוואה-רבועית-ומחזירה-את-שורשיה"><i class="fa fa-check"></i><b>7.3.1</b> דוגמא ראשונה - פונקציה שמקבלת משוואה רבועית, ומחזירה את שורשיה</a></li>
+<li class="chapter" data-level="7.3.2" data-path="פונקציות.html"><a href="פונקציות.html#דוגמא-מספר-2"><i class="fa fa-check"></i><b>7.3.2</b> דוגמא מספר 2</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="ספריות.html"><a href="ספריות.html"><i class="fa fa-check"></i><b>8</b> ספריות</a>
 <ul>
@@ -218,18 +226,113 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="פונקציות" class="section level1" number="7">
 <h1><span class="header-section-number"> 7</span> פונקציות</h1>
+<p>עד עכשיו יצא לנו להכיר פונקציות רבות ב
+base-r.
+בנוסף לפונקציות שהשתמשנו בהם, שאנשים אחרים תכנתו עבורונו, אנחנו יכולים לתכנת בעצמנו פונקציות שיעשו איזה משימה שנטיל עליהן!</p>
 <div id="למה-לכתוב-פונקציות" class="section level2" number="7.1">
 <h2><span class="header-section-number">7.1</span> למה לכתוב פונקציות?</h2>
-<p>בלה בלה בלה</p>
+<p>אם אנחנו מוצאים את עצמנו עושים את אותה הפעולה באופן חזרתי שוב ושוב, אנחנו סתם מבזבזים זמן בהקלדה מיותרת ומייגעת. בנוסף, הקוד החזרתי מקשה על הקריאה של הסקריפט שלנו. שימוש בפונקציות, שאותן נגדיר בראש הסקריפט שלנו, או בסקריפט אחר, יהפכו את הקוד שלנו ל״נקי״ ו״קריא״ יותר.</p>
 </div>
 <div id="מגניב-איך-עושים-את-זה" class="section level2" number="7.2">
 <h2><span class="header-section-number">7.2</span> מגניב, איך עושים את זה?</h2>
-<p>בלה בלה בלה</p>
+<p>המבנה של כתיבת פונקציה נראה כך:</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="פונקציות.html#cb34-1" aria-hidden="true" tabindex="-1"></a>name_of_my_function <span class="ot">&lt;-</span> <span class="cf">function</span>(input_1, ..., input_n){</span>
+<span id="cb34-2"><a href="פונקציות.html#cb34-2" aria-hidden="true" tabindex="-1"></a>  code</span>
+<span id="cb34-3"><a href="פונקציות.html#cb34-3" aria-hidden="true" tabindex="-1"></a>  .</span>
+<span id="cb34-4"><a href="פונקציות.html#cb34-4" aria-hidden="true" tabindex="-1"></a>  .</span>
+<span id="cb34-5"><a href="פונקציות.html#cb34-5" aria-hidden="true" tabindex="-1"></a>  .</span>
+<span id="cb34-6"><a href="פונקציות.html#cb34-6" aria-hidden="true" tabindex="-1"></a>  code</span>
+<span id="cb34-7"><a href="פונקציות.html#cb34-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(my_output)</span>
+<span id="cb34-8"><a href="פונקציות.html#cb34-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>כלומר,
+אנחנו מגדירים פונקציה בשם שאנחנו בוחרים, וקובעים שמות למשתנים שהפונקציה תקבל.
+לאחר מכן, בתוך הסוגריים המעוגלים, נעשה פעולות על הקלטים של הפונקציה,
+ונבסוף, נחזיר את מה שנרצה בתוך הפקודה
+<code>return</code></p>
 </div>
 <div id="כמה-דוגמאות" class="section level2" number="7.3">
 <h2><span class="header-section-number">7.3</span> כמה דוגמאות</h2>
-<p>בלה בלה בלה</p>
+<div id="דוגמא-ראשונה---פונקציה-שמקבלת-משוואה-רבועית-ומחזירה-את-שורשיה" class="section level3" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> דוגמא ראשונה - פונקציה שמקבלת משוואה רבועית, ומחזירה את שורשיה</h3>
+<p>משוואה ריבועית היא משוואה מהצורה הזאת</p>
+<p><span class="math display">\[
+f(x) = a \cdot x^2 + b \cdot x + c
+\]</span></p>
+<p>שורשים של משוואה כזאת מוגדרים להיות ערכי ה
+<span class="math inline">\(x\)</span>
+אשר עבורם המשוואה שווה ל
+<span class="math inline">\(0\)</span>
+.</p>
+<p>יש למשוואה רבועית נוסחא סגורה ומפורסת, שאני מניח שרובנו נתקלנו בה אי-אז בימי בית הספר העליזים.</p>
+<p><span class="math display">\[
+x_{1,2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\]</span>
+כאשר
+<span class="math inline">\(a, b, c\)</span>
+הם מקדמי המשוואה כפי שהגדרנו.</p>
+<p>אנחנו נכתוב עכשיו פונקציה פשוטה יחסית ב
+R
+שעבור כל משוואה ריבועית, תגיש לנו על מגש של כסף את פתרונותיה.
+התשובה תתקבל במהירות, והתוכנה תמיד תחזיר לנו תשובה נכונה, איזה כי, זה לתכנת, אה?</p>
+<p>אחלה. נתחיל. נקרא לפונציה שלנו
+sqrt_res,
+היא תקבל שלושה ערכים, שכולם יהיו מספרים,
+<span class="math inline">\(a, b, c\)</span>
+אשר יתארו במדוייק את המשוואה הריבועית שעבורה אנחנו מעוניינים למצוא שורשים.
+הפלט שלה יהיה וקטור באורך 2.
+למשוואה רבועית יכולים להיות לכל היותר 2 פתרונות ממשיים, אך יישנן משוואות רבועיות שיש להן פתרון יחיד, או אפס פתרונות.
+במקרה הזה, הפונקציה שלנו תחזיר בוקטור ערכים חסרים</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="פונקציות.html#cb35-1" aria-hidden="true" tabindex="-1"></a>sqrt_res <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b, c){</span>
+<span id="cb35-2"><a href="פונקציות.html#cb35-2" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb35-3"><a href="פונקציות.html#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>((b<span class="sc">**</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">4</span><span class="sc">*</span>a<span class="sc">*</span>c) <span class="sc">==</span> <span class="dv">0</span>){</span>
+<span id="cb35-4"><a href="פונקציות.html#cb35-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">c</span>(<span class="sc">-</span>b<span class="sc">/</span>(<span class="dv">2</span><span class="sc">*</span>a), <span class="cn">NA</span>))</span>
+<span id="cb35-5"><a href="פונקציות.html#cb35-5" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span>((b<span class="sc">**</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">4</span><span class="sc">*</span>a<span class="sc">*</span>c) <span class="sc">&lt;</span> <span class="dv">0</span>){</span>
+<span id="cb35-6"><a href="פונקציות.html#cb35-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>))</span>
+<span id="cb35-7"><a href="פונקציות.html#cb35-7" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span>{</span>
+<span id="cb35-8"><a href="פונקציות.html#cb35-8" aria-hidden="true" tabindex="-1"></a>    x_1 <span class="ot">&lt;-</span> (<span class="sc">-</span>b <span class="sc">+</span> (b<span class="sc">**</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">4</span><span class="sc">*</span>a<span class="sc">*</span>c)<span class="sc">**</span><span class="fl">0.5</span>)<span class="sc">/</span>(<span class="dv">2</span><span class="sc">*</span>a)</span>
+<span id="cb35-9"><a href="פונקציות.html#cb35-9" aria-hidden="true" tabindex="-1"></a>    x_2 <span class="ot">&lt;-</span> (<span class="sc">-</span>b <span class="sc">-</span> (b<span class="sc">**</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">4</span><span class="sc">*</span>a<span class="sc">*</span>c)<span class="sc">**</span><span class="fl">0.5</span>)<span class="sc">/</span>(<span class="dv">2</span><span class="sc">*</span>a)</span>
+<span id="cb35-10"><a href="פונקציות.html#cb35-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">c</span>(x_1, x_2))</span>
+<span id="cb35-11"><a href="פונקציות.html#cb35-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb35-12"><a href="פונקציות.html#cb35-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>בואו נעשה שימוש בפונקציה שלנו!</p>
+<p><span class="math display">\[
+f(x) = x^2
+\]</span></p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="פונקציות.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt_res</span>(<span class="at">a =</span> <span class="dv">1</span>, <span class="at">b =</span> <span class="dv">0</span>, <span class="at">c =</span> <span class="dv">0</span>)</span></code></pre></div>
+<pre><code>## [1]  0 NA</code></pre>
+<p><span class="math display">\[
+f(x) = x^2 + 3
+\]</span></p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="פונקציות.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt_res</span>(<span class="at">a =</span> <span class="dv">1</span>, <span class="at">b =</span> <span class="dv">0</span>, <span class="at">c =</span> <span class="dv">3</span>)</span></code></pre></div>
+<pre><code>## [1] NA NA</code></pre>
+<p><span class="math display">\[
+f(x) = 2x^2 + 3x + 1
+\]</span></p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="פונקציות.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sqrt_res</span>(<span class="at">a =</span> <span class="dv">2</span>, <span class="at">b =</span> <span class="dv">3</span>, <span class="at">c =</span> <span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1]  0.2807764 -1.7807764</code></pre>
+<p>מגניב.
+יש לשים לב שאם הפונקציה שלנו היתה מקבלת קלטים לא רצויים, נניח מחרוזות במקום מספרים היא היתה ״נשברת״, כלומר לא עובדת כמו שרצינו שהיא תעבוד. ניתן להפוך את הפונקציה שלנו ל״חסינה״ לקלטים לא רצויים כך:</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="פונקציות.html#cb42-1" aria-hidden="true" tabindex="-1"></a>sqrt_res <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b, c){</span>
+<span id="cb42-2"><a href="פונקציות.html#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="fu">class</span>(<span class="fu">c</span>(a,b,c)) <span class="sc">!=</span> <span class="st">&quot;numeric&quot;</span>){</span>
+<span id="cb42-3"><a href="פונקציות.html#cb42-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="st">&quot;bad inputs!!!&quot;</span>)</span>
+<span id="cb42-4"><a href="פונקציות.html#cb42-4" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb42-5"><a href="פונקציות.html#cb42-5" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb42-6"><a href="פונקציות.html#cb42-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>((b<span class="sc">**</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">4</span><span class="sc">*</span>a<span class="sc">*</span>c) <span class="sc">==</span> <span class="dv">0</span>){</span>
+<span id="cb42-7"><a href="פונקציות.html#cb42-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">c</span>(<span class="sc">-</span>b<span class="sc">/</span>(<span class="dv">2</span><span class="sc">*</span>a), <span class="cn">NA</span>))</span>
+<span id="cb42-8"><a href="פונקציות.html#cb42-8" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span>((b<span class="sc">**</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">4</span><span class="sc">*</span>a<span class="sc">*</span>c) <span class="sc">&lt;</span> <span class="dv">0</span>){</span>
+<span id="cb42-9"><a href="פונקציות.html#cb42-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">c</span>(<span class="cn">NA</span>, <span class="cn">NA</span>))</span>
+<span id="cb42-10"><a href="פונקציות.html#cb42-10" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span>{</span>
+<span id="cb42-11"><a href="פונקציות.html#cb42-11" aria-hidden="true" tabindex="-1"></a>    x_1 <span class="ot">&lt;-</span> (<span class="sc">-</span>b <span class="sc">+</span> (b<span class="sc">**</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">4</span><span class="sc">*</span>a<span class="sc">*</span>c)<span class="sc">**</span><span class="fl">0.5</span>)<span class="sc">/</span>(<span class="dv">2</span><span class="sc">*</span>a)</span>
+<span id="cb42-12"><a href="פונקציות.html#cb42-12" aria-hidden="true" tabindex="-1"></a>    x_2 <span class="ot">&lt;-</span> (<span class="sc">-</span>b <span class="sc">-</span> (b<span class="sc">**</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">4</span><span class="sc">*</span>a<span class="sc">*</span>c)<span class="sc">**</span><span class="fl">0.5</span>)<span class="sc">/</span>(<span class="dv">2</span><span class="sc">*</span>a)</span>
+<span id="cb42-13"><a href="פונקציות.html#cb42-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">c</span>(x_1, x_2))</span>
+<span id="cb42-14"><a href="פונקציות.html#cb42-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb42-15"><a href="פונקציות.html#cb42-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>נמשיך לדוגמא הבא.</p>
+</div>
+<div id="דוגמא-מספר-2" class="section level3" number="7.3.2">
+<h3><span class="header-section-number">7.3.2</span> דוגמא מספר 2</h3>
 
+</div>
 </div>
 </div>
             </section>
@@ -292,6 +395,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

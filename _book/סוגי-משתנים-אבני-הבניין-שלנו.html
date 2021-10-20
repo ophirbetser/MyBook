@@ -174,6 +174,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="תנאים.html"><a href="תנאים.html"><i class="fa fa-check"></i><b>5</b> תנאים</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="תנאים.html"><a href="תנאים.html#יש-אנחנו-יכולים-לשאול-את-המחשב-שאלות"><i class="fa fa-check"></i><b>5.1</b> יש! אנחנו יכולים לשאול את המחשב שאלות</a></li>
+<li class="chapter" data-level="5.2" data-path="תנאים.html"><a href="תנאים.html#וריאציות"><i class="fa fa-check"></i><b>5.2</b> וריאציות</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="תנאים.html"><a href="תנאים.html#ifelse"><i class="fa fa-check"></i><b>5.2.1</b> ifelse</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="לולאות.html"><a href="לולאות.html"><i class="fa fa-check"></i><b>6</b> לולאות</a>
 <ul>
@@ -185,7 +189,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="7.1" data-path="פונקציות.html"><a href="פונקציות.html#למה-לכתוב-פונקציות"><i class="fa fa-check"></i><b>7.1</b> למה לכתוב פונקציות?</a></li>
 <li class="chapter" data-level="7.2" data-path="פונקציות.html"><a href="פונקציות.html#מגניב-איך-עושים-את-זה"><i class="fa fa-check"></i><b>7.2</b> מגניב, איך עושים את זה?</a></li>
-<li class="chapter" data-level="7.3" data-path="פונקציות.html"><a href="פונקציות.html#כמה-דוגמאות"><i class="fa fa-check"></i><b>7.3</b> כמה דוגמאות</a></li>
+<li class="chapter" data-level="7.3" data-path="פונקציות.html"><a href="פונקציות.html#כמה-דוגמאות"><i class="fa fa-check"></i><b>7.3</b> כמה דוגמאות</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="פונקציות.html"><a href="פונקציות.html#דוגמא-ראשונה---פונקציה-שמקבלת-משוואה-רבועית-ומחזירה-את-שורשיה"><i class="fa fa-check"></i><b>7.3.1</b> דוגמא ראשונה - פונקציה שמקבלת משוואה רבועית, ומחזירה את שורשיה</a></li>
+<li class="chapter" data-level="7.3.2" data-path="פונקציות.html"><a href="פונקציות.html#דוגמא-מספר-2"><i class="fa fa-check"></i><b>7.3.2</b> דוגמא מספר 2</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="ספריות.html"><a href="ספריות.html"><i class="fa fa-check"></i><b>8</b> ספריות</a>
 <ul>
@@ -367,6 +375,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
