@@ -143,7 +143,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">מבוא לתכונת בשפת R</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> על הספר</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> url: your book url like <span>https://bookdown.org/yihui/bookdown</span></a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#איך-לקרוא-את-הספר-וההדרכות"><i class="fa fa-check"></i><b>1.1</b> איך לקרוא את הספר וההדרכות</a></li>
 </ul></li>
@@ -174,6 +174,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5" data-path="תנאים.html"><a href="תנאים.html"><i class="fa fa-check"></i><b>5</b> תנאים</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="תנאים.html"><a href="תנאים.html#יש-אנחנו-יכולים-לשאול-את-המחשב-שאלות"><i class="fa fa-check"></i><b>5.1</b> יש! אנחנו יכולים לשאול את המחשב שאלות</a></li>
+<li class="chapter" data-level="5.2" data-path="תנאים.html"><a href="תנאים.html#וריאציות"><i class="fa fa-check"></i><b>5.2</b> וריאציות</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="תנאים.html"><a href="תנאים.html#ifelse"><i class="fa fa-check"></i><b>5.2.1</b> ifelse</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="לולאות.html"><a href="לולאות.html"><i class="fa fa-check"></i><b>6</b> לולאות</a>
 <ul>
@@ -218,11 +222,130 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="תנאים" class="section level1" number="5">
 <h1><span class="header-section-number"> 5</span> תנאים</h1>
-<p>בלה בלה בלה</p>
+<p>לעיתים קרובות אנחנו רוצים לשאול את המחשב שאלות. למשל, נרצה לפעמים לקבל תובה של כן או לא על שאלות כמו האם המספר הזה זוגי? האם המחרוזת שלי באורך של 4 תווים?</p>
+<p>הדרך לעשות זאת בשפות תכנות באופן כללי, וגם בשפת
+R
+בפרט היא בעזרת שאילתות של
+if else.
+שאילתה כזאת תקבל איזה פסוק לוגי, שיכול לקבל ערך של או אמת או שקר, ואנו נפרט לה מה להחזיר עבור אמת ומה להחזיר עבור שקר. בואו נראה דוגמא.</p>
 <div id="יש-אנחנו-יכולים-לשאול-את-המחשב-שאלות" class="section level2" number="5.1">
 <h2><span class="header-section-number">5.1</span> יש! אנחנו יכולים לשאול את המחשב שאלות</h2>
-<p>בלה בלה בלה</p>
+<p>נניח ויש לי מספר,
+x,
+שמכיל רנדומלי ערך מסויים, נגיד 5.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="תנאים.html#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">5</span></span></code></pre></div>
+<p>אני יכול לבקש מהמחשב להדפיס האם הערך של
+x
+הוא זוגי או אי זוגי. ראשית אראה איך לכתוב את הפסוק הלוגי שיענה לי על השאלה הזאת. עבור כך אני אעשה שימוש באופרטור ״מודולו״ שכותבים אותו ב
+R
+כך
+<code>%%</code>.
+את הביטוי
+<code>11 %% 3</code>
+נקרא באופן הבא:
+11 מודלו שלוש,
+והמשמעות המתמטית של הביטוי היא
+מהי שארית החלוקה במספרים שלמים של 11
+חלקי 3.
+התשובה לכך היא 2.</p>
+<p>באופן תכנותי ב
+R
+אכתוב את השאלה הזאת כך</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="תנאים.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">11</span> <span class="sc">%%</span> <span class="dv">3</span></span></code></pre></div>
+<pre><code>## [1] 2</code></pre>
+<p>מעולה!
+נחזור לעניינו, אני רוצה לברר האם המספר שלי
+x
+הוא זוגי או אי-זוגי.
+עבור כל מספר זוגי, שארית החלוקה ב 2 היא 0,
+ועבור כל מספר אי-זוגי שארית החלוקה ב 2 היא 1.</p>
+<p>לכך כדי לקבל תשובה של אמת או שקר על האם
+x
+הוא זוגי אכתוב ב
+R</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="תנאים.html#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span></span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<p>זה התנאי ששאילתת ה
+ifelse
+שלנו תקבל.</p>
+<p>המבנה של שאילתת
+ifelse
+נראה כך:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="תנאים.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="st">&quot;פסוק לוגי שיכול לקבל ערך של אמת או שקר&quot;</span>){</span>
+<span id="cb6-2"><a href="תנאים.html#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;פקודות של מה שיקרה אם הפסוק הוא פסוק אמת&quot;</span></span>
+<span id="cb6-3"><a href="תנאים.html#cb6-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb6-4"><a href="תנאים.html#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;פקודות של מה יקרה אם הפסוק הוא פסוק שקר&quot;</span></span>
+<span id="cb6-5"><a href="תנאים.html#cb6-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>נראה דוגמא:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="תנאים.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(x <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>){</span>
+<span id="cb7-2"><a href="תנאים.html#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;wow, x is even!&quot;</span>)</span>
+<span id="cb7-3"><a href="תנאים.html#cb7-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> {</span>
+<span id="cb7-4"><a href="תנאים.html#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;look, x is odd!&quot;</span>)</span>
+<span id="cb7-5"><a href="תנאים.html#cb7-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## [1] &quot;look, x is odd!&quot;</code></pre>
+<p>בגלל שערך של
+x
+הוא 5,
+x
+הוא אי-זוגי,
+התנאי בשאילתה קיבל ערך
+<code>FALSE</code>
+ולכן רצו רק הפקודות בתוך הסוגריים המסולסלים של ה
+<code>else</code>
+ולא רצו כלל הפקודות בתוך הסוגריים המסולסלים של ה
+<code>if</code></p>
+<p>מגניב.</p>
+</div>
+<div id="וריאציות" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> וריאציות</h2>
+<p>ניתן לכלול יותר מתנאי אחד בשאילתת
+ifelse,
+למשל אני רוצה לחלק את הקלטים המספריים שלי באופן הבא:</p>
+<ul>
+<li>אם x זוגי וגדול מ 10, תדפיס ״ big-even"</li>
+<li>אם x שווה בדיוק ל 1 תדפיס ״the one and only"</li>
+<li>בכל מקרה אחר, תדפיס ״orrrr"</li>
+</ul>
+<p>ב
+R
+הפקידה הזאת תראה כך:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="תנאים.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(x <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> x <span class="sc">&gt;</span> <span class="dv">10</span>){</span>
+<span id="cb9-2"><a href="תנאים.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;big-even&quot;</span>)</span>
+<span id="cb9-3"><a href="תנאים.html#cb9-3" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span> <span class="cf">if</span>(x <span class="sc">==</span> <span class="dv">1</span>){</span>
+<span id="cb9-4"><a href="תנאים.html#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;the one and only&quot;</span>)</span>
+<span id="cb9-5"><a href="תנאים.html#cb9-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">else</span>{</span>
+<span id="cb9-6"><a href="תנאים.html#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="st">&quot;orrrr&quot;</span>)</span>
+<span id="cb9-7"><a href="תנאים.html#cb9-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<pre><code>## [1] &quot;orrrr&quot;</code></pre>
+<p>באותה הדרך אנחנו יכולים להוסיף כמה תנאי שרק נראה, רק חשוב לשים לב שכותבים את הקוד בדיוק האותו האופן שכתבתי פה.</p>
+<div id="ifelse" class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> ifelse</h3>
+<p>פקודה סופר שימושים ב
+R
+נקראת
+<code>ifelse</code>
+והיא משתמש ליצירת שאילתת תנאי על וקטור שלם.</p>
+<p>נניח שיש לי את הוקטור הרנדומלי הבא:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="תנאים.html#cb11-1" aria-hidden="true" tabindex="-1"></a>rand_v <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">20</span>)</span>
+<span id="cb11-2"><a href="תנאים.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(rand_v)</span></code></pre></div>
+<pre><code>##  [1]  82  62  60  40  96 100  58  67  10  63  31   8  32  46   2  95  26  21
+## [19]  90  23</code></pre>
+<p>ואני רוצה לשאול עבור כך ערך בנפרד האם הוא זוגי או אי-זוגי - אשתמש בשביל זה בפונקציה<br />
+<code>ifelse</code>. הדרך לכתוב אותה היא כזאת:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="תנאים.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(<span class="st">&quot;מבחן על וקטור&quot;</span> ,</span>
+<span id="cb13-2"><a href="תנאים.html#cb13-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;מה להחזיר עם המבחן מצליח&quot;</span>,</span>
+<span id="cb13-3"><a href="תנאים.html#cb13-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;מה להחזיר אם הוא לא מצליח&quot;</span></span>
+<span id="cb13-4"><a href="תנאים.html#cb13-4" aria-hidden="true" tabindex="-1"></a>       )</span></code></pre></div>
+<p>ודוגמא לעניננו בפועל:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="תנאים.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(rand_v <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>,</span>
+<span id="cb14-2"><a href="תנאים.html#cb14-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;good&quot;</span>,</span>
+<span id="cb14-3"><a href="תנאים.html#cb14-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;why???&quot;</span>)</span></code></pre></div>
+<pre><code>##  [1] &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;why???&quot;
+##  [9] &quot;good&quot;   &quot;why???&quot; &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;why???&quot;
+## [17] &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;why???&quot;</code></pre>
+<p>הפלט של הפונקציה הוא וקטור, ונוכל כמובן לשמור אותה לשימוש עתידי אם נרצה זאת.</p>
 
+</div>
 </div>
 </div>
             </section>
