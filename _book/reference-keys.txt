@@ -35,3 +35,9 @@ apply
 איך-להוריד-ולטעון-ספריות
 base-r
 pacman
+url-your-book-url-like-httpsbookdown.orgyihuibookdown
+פונקציות-סטיסטיות
+ממוצע
+שונות
+סטיית-תקן
+חציון
