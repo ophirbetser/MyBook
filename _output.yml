@@ -1,12 +1,13 @@
 bookdown::gitbook:
   css: style.css
+  output_dir: ./docs
   config:
     toc:
       before: |
         <li><a href="./">מבוא לתכונת בשפת R</a></li>
       after: |
         <li style="text-align:left;"><a href="https://ophirbetser.netlify.app/" target="blank">ophir betser</a></li>
-    edit: https://github.com/ophirbetser/MyBook//BRANCH/%s
+    edit: https://github.com/ophirbetser/MyBook//index/%s
     download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:
