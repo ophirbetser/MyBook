@@ -7,7 +7,7 @@ bookdown::gitbook:
         <li><a href="./">מבוא לתכונת בשפת R</a></li>
       after: |
         <li style="text-align:left;"><a href="https://ophirbetser.netlify.app/" target="blank">ophir betser</a></li>
-    edit: https://github.com/ophirbetser/MyBook/%s
+    edit: https://github.com/ophirbetser/MyBsdfsdfsdfook/%s
     download: ["pdf", "epub"]
 bookdown::pdf_book:
   includes:
