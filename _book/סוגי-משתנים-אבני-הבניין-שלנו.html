@@ -61,6 +61,70 @@ set in the _output.yml file.</p>" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -79,7 +143,7 @@ set in the _output.yml file.</p>" />
 <li><a href="./">מבוא לתכונת בשפת R</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> url: your book url like <span>https://bookdown.org/yihui/bookdown</span></a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> על הספר</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#איך-לקרוא-את-הספר-וההדרכות"><i class="fa fa-check"></i><b>1.1</b> איך לקרוא את הספר וההדרכות</a></li>
 <li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#יצירת-קשר"><i class="fa fa-check"></i><b>1.2</b> יצירת קשר</a></li>
@@ -167,30 +231,92 @@ set in the _output.yml file.</p>" />
             <section class="normal" id="section-">
 <div id="סוגי-משתנים-אבני-הבניין-שלנו" class="section level1" number="4">
 <h1><span class="header-section-number"> 4</span> סוגי משתנים: אבני הבניין שלנו</h1>
-<p>Placeholder</p>
 <div id="משתנים" class="section level2" number="4.1">
 <h2><span class="header-section-number">4.1</span> משתנים??</h2>
+<p>יש מספר משפחות של שפות תכנות. אחת מהמשפחות הכי שחיכות נקראת ״תכנות מונחה עצמים״. למשל,
+השפות
+Java
+ו
+Python
+כתובות בסגנון של תכנות מונחה עצמיים, וכך גם
+R.</p>
+<p>לעניינו, לא חשוב לעומק מה המשמעות של הדבר הזה,
+אך כן חשוב לדעת שכל פונקציה, משתנה או אוביקט ב
+R
+יהיה שייך לאיזו מחלקה, שיש לה מאפיינים שיחודים לה.</p>
+<!-- TODO להוסיף קישור לסרטון שמסביר יותר על מה זה תכנות מונחה עצמים -->
+<p>לדוגמא, אפשר לחבר אוביקט מספרי לאוביקט מספרי אחר, אך אין משמעות לחיבור של אוביקט מספרי ומחרוזת. כדי לברר לאיזה
+מחלקה כל אוביקט משוייך, אנחנו יכולים להשתמש בפונקציה
+<code>class</code></p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="dv">1</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(<span class="st">&quot;1&quot;</span>)</span></code></pre></div>
+<pre><code>## [1] &quot;character&quot;</code></pre>
+<p>אכתוב עכשיו על סוגי המשתנים הבסיסים ביותר שיש בשפת
+R
+אשר ישמשו בתור אבני הבסיס של כל פרויקט שנרצה לבנות.</p>
+<li style="margin-left: 5px;">
+<strong>intenger &amp; numeric:</strong> משתנים מספרים, ההבדל בין השתיים הוא יחס לשינויים אחרי הנקודה העשרונית
+</li>
+<li style="margin-left: 5px;">
+<strong>logical:</strong> משתנה שמקבלים ערך של או אמת או שקר
+</li>
+<li style="margin-left: 5px;">
+<strong>character:</strong> מילים או אותיות, אנחנו נקרא למשתנים כאלה ״מחרוזות״
+</li>
 </div>
 <div id="integer" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> integer</h2>
+<p>משנה זה יכיל ערכים של מספרים שלמים. הסיבה שיש הפרדה בין סוג המחלקה של מסרים שלמים ומספרים עם נקודה עשרונית, היא שניתן לשמור בזכרון של המחשב מספרים שלמים באופן יעיל יותר, לכן, אם האוביקט שלנו מכיל מספרים שלמים בלבד עדיף למחשב לשמור אותו כך. מספרים שלמים יכולים להיות מוצגים כך <code>5</code> או כך
+<code>5L</code>.</p>
+<p>על מספרים שלמים אפשר לבצע פעולות חשבוניות, בדומה לאלו שהצגנו בפרק על שימוש ב
+R
+בתור מחשבון.
+אך יש לשים לב שאם נבצע פעולה שתשנה את וקטור המספרים השלמים שלנו למספרים שיש להם מקודה עשרונית - סוג המשתנה ישונה גם הוא</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb48-1" aria-hidden="true" tabindex="-1"></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(1L, 9L, 9L, 6L)</span>
+<span id="cb48-2"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(v)</span></code></pre></div>
+<pre><code>## [1] &quot;integer&quot;</code></pre>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(v <span class="sc">/</span> <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## [1] 0.5 4.5 4.5 3.0</code></pre>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">class</span>(v <span class="sc">/</span> <span class="dv">2</span>))</span></code></pre></div>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
 </div>
 <div id="numeric" class="section level2" number="4.3">
 <h2><span class="header-section-number">4.3</span> numeric</h2>
+<p>זה סוג המשתנה שכנראה תעבדו איתו הכי הרבה. על וקטורי
+numeric
+אפשר לעשות פעולות חשבוניות מגוונות, כפי שהדגמנו בפרק הקודם.</p>
 </div>
 <div id="logical" class="section level2" number="4.4">
 <h2><span class="header-section-number">4.4</span> logical</h2>
+<p>משתנים אלו מקבלים ערכים של אמת או של שקר. הם ישמשו אותנו הרבה פעמים בתור סוג של כפתור, או מתג, אשר יעזור לנו לחלק קבוצה לשתי קבוצות, ביחס לקיום של תנאי שנגדיר.
+שם נוסף שנשתמש בו למשתנים האלו יהיה משתנים בוליאנים.</p>
+<p>הערכים היחידם שמשתנים בוליאנים יכולים לקבל הם
+<code>TRUE</code>
+ו-
+<code>FALSE</code></p>
 <div id="טבלאות-אמת" class="section level3" number="4.4.1">
 <h3><span class="header-section-number">4.4.1</span> טבלאות אמת</h3>
+<p>בלה בלה בלה</p>
 </div>
 <div id="all" class="section level3" number="4.4.2">
 <h3><span class="header-section-number">4.4.2</span> all</h3>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(<span class="fu">c</span>(T,T,T,F,T))</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">all</span>(<span class="fu">c</span>(T,T,T,T,T))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
 </div>
 <div id="any" class="section level3" number="4.4.3">
 <h3><span class="header-section-number">4.4.3</span> any</h3>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb58-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">any</span>(<span class="fu">c</span>(F,T,F,F))</span></code></pre></div>
+<pre><code>## [1] TRUE</code></pre>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="סוגי-משתנים-אבני-הבניין-שלנו.html#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">any</span>(<span class="fu">c</span>(F,F,F,F))</span></code></pre></div>
+<pre><code>## [1] FALSE</code></pre>
 </div>
 </div>
 <div id="character" class="section level2" number="4.5">
 <h2><span class="header-section-number">4.5</span> character</h2>
+<p>בלה בלה בלה</p>
 
 </div>
 </div>
@@ -242,8 +368,11 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
-"search": false,
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }
@@ -251,6 +380,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
