@@ -46,3 +46,105 @@ knitr::write_bib(c(
 ), 'packages.bib')
 ```
 
+
+<!--chapter:end:index.Rmd-->
+
+# מה היא שפת R? 
+
+בלה בלה בלה
+
+## יתרונות וחסרונות בשימוש ב R
+
+בלה בלה בלה
+
+## מדריך התקנה
+
+בלה בלה בלה
+
+
+<!--chapter:end:01-intro.Rmd-->
+
+
+# שימוש ב R בתור מחשבון
+
+Placeholder
+
+
+## פעולות חשבון בסיסיות
+## פונקציות סטיסטיות
+### ממוצע
+### שונות
+### סטיית תקן
+### חציון
+## קצת לינארית
+
+<!--chapter:end:02-simple_Math.Rmd-->
+
+
+# סוגי משתנים: אבני הבניין שלנו
+
+Placeholder
+
+
+## משתנים??
+## integer
+## numeric
+## logical
+### טבלאות אמת
+### all
+### any
+## character
+
+<!--chapter:end:03-variable_types.Rmd-->
+
+
+# תנאים
+
+Placeholder
+
+
+## יש! אנחנו יכולים לשאול את המחשב שאלות
+## וריאציות
+### ifelse
+
+<!--chapter:end:04-ifelse_conditions.Rmd-->
+
+
+# לולאות
+
+Placeholder
+
+
+## for loops
+## while
+## apply
+
+<!--chapter:end:05-loops.Rmd-->
+
+
+# פונקציות
+
+Placeholder
+
+
+## למה לכתוב פונקציות?
+## מגניב, איך עושים את זה?
+## כמה דוגמאות
+### דוגמא ראשונה - פונקציה שמקבלת משוואה רבועית, ומחזירה את שורשיה
+### דוגמא שניה
+
+<!--chapter:end:06-functions.Rmd-->
+
+
+# ספריות
+
+Placeholder
+
+
+## איך להוריד ולטעון ספריות
+## base-r
+## מבט על כל הפונקציות שיש בכל ספריה
+## pacman
+
+<!--chapter:end:07-packages.Rmd-->
+

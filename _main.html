@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>מבוא לתכנות ב R</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7" />
+
+  <meta property="og:title" content="מבוא לתכנות ב R" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="ophirbetser/MyBook/index.html" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="מבוא לתכנות ב R" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="אופיר בצר" />
+
+
+<meta name="date" content="2021-10-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+<!--bookdown:title:start-->
+<div id="header">
+<h1 class="title">מבוא לתכנות ב R</h1>
+<p class="author"><em>אופיר בצר</em></p>
+<p class="date"><em>2021-10-18</em></p>
+</div>
+<!--bookdown:title:end-->
+
+<!--bookdown:toc:start-->
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+<!--bookdown:toc2:start-->
+<ul>
+<li><a href="#על-הספר"><span class="toc-section-number">1</span> על הספר</a>
+<ul>
+<li><a href="#איך-לקרוא-את-הספר-וההדרכות"><span class="toc-section-number">1.1</span> איך לקרוא את הספר וההדרכות</a></li>
+<li><a href="#יצירת-קשר"><span class="toc-section-number">1.2</span> יצירת קשר</a></li>
+</ul></li>
+<li><a href="#מה-היא-שפת-r"><span class="toc-section-number">2</span> מה היא שפת R?</a>
+<ul>
+<li><a href="#יתרונות-וחסרונות-בשימוש-ב-r"><span class="toc-section-number">2.1</span> יתרונות וחסרונות בשימוש ב R</a></li>
+<li><a href="#מדריך-התקנה"><span class="toc-section-number">2.2</span> מדריך התקנה</a></li>
+</ul></li>
+<li><a href="#שימוש-ב-r-בתור-מחשבון"><span class="toc-section-number">3</span> שימוש ב R בתור מחשבון</a>
+<ul>
+<li><a href="#פעולות-חשבון-בסיסיות"><span class="toc-section-number">3.1</span> פעולות חשבון בסיסיות</a></li>
+<li><a href="#פונקציות-סטיסטיות"><span class="toc-section-number">3.2</span> פונקציות סטיסטיות</a>
+<ul>
+<li><a href="#ממוצע"><span class="toc-section-number">3.2.1</span> ממוצע</a></li>
+<li><a href="#שונות"><span class="toc-section-number">3.2.2</span> שונות</a></li>
+<li><a href="#סטיית-תקן"><span class="toc-section-number">3.2.3</span> סטיית תקן</a></li>
+<li><a href="#חציון"><span class="toc-section-number">3.2.4</span> חציון</a></li>
+</ul></li>
+<li><a href="#קצת-לינארית"><span class="toc-section-number">3.3</span> קצת לינארית</a></li>
+</ul></li>
+<li><a href="#סוגי-משתנים-אבני-הבניין-שלנו"><span class="toc-section-number">4</span> סוגי משתנים: אבני הבניין שלנו</a>
+<ul>
+<li><a href="#משתנים"><span class="toc-section-number">4.1</span> משתנים??</a></li>
+<li><a href="#integer"><span class="toc-section-number">4.2</span> integer</a></li>
+<li><a href="#numeric"><span class="toc-section-number">4.3</span> numeric</a></li>
+<li><a href="#logical"><span class="toc-section-number">4.4</span> logical</a>
+<ul>
+<li><a href="#טבלאות-אמת"><span class="toc-section-number">4.4.1</span> טבלאות אמת</a></li>
+<li><a href="#all"><span class="toc-section-number">4.4.2</span> all</a></li>
+<li><a href="#any"><span class="toc-section-number">4.4.3</span> any</a></li>
+</ul></li>
+<li><a href="#character"><span class="toc-section-number">4.5</span> character</a></li>
+</ul></li>
+<li><a href="#תנאים"><span class="toc-section-number">5</span> תנאים</a>
+<ul>
+<li><a href="#יש-אנחנו-יכולים-לשאול-את-המחשב-שאלות"><span class="toc-section-number">5.1</span> יש! אנחנו יכולים לשאול את המחשב שאלות</a></li>
+<li><a href="#וריאציות"><span class="toc-section-number">5.2</span> וריאציות</a>
+<ul>
+<li><a href="#ifelse"><span class="toc-section-number">5.2.1</span> ifelse</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#לולאות"><span class="toc-section-number">6</span> לולאות</a>
+<ul>
+<li><a href="#for-loops"><span class="toc-section-number">6.1</span> for loops</a></li>
+<li><a href="#while"><span class="toc-section-number">6.2</span> while</a></li>
+<li><a href="#apply"><span class="toc-section-number">6.3</span> apply</a></li>
+</ul></li>
+<li><a href="#פונקציות"><span class="toc-section-number">7</span> פונקציות</a>
+<ul>
+<li><a href="#למה-לכתוב-פונקציות"><span class="toc-section-number">7.1</span> למה לכתוב פונקציות?</a></li>
+<li><a href="#מגניב-איך-עושים-את-זה"><span class="toc-section-number">7.2</span> מגניב, איך עושים את זה?</a></li>
+<li><a href="#כמה-דוגמאות"><span class="toc-section-number">7.3</span> כמה דוגמאות</a>
+<ul>
+<li><a href="#דוגמא-ראשונה---פונקציה-שמקבלת-משוואה-רבועית-ומחזירה-את-שורשיה"><span class="toc-section-number">7.3.1</span> דוגמא ראשונה - פונקציה שמקבלת משוואה רבועית, ומחזירה את שורשיה</a></li>
+<li><a href="#דוגמא-שניה"><span class="toc-section-number">7.3.2</span> דוגמא שניה</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#ספריות"><span class="toc-section-number">8</span> ספריות</a>
+<ul>
+<li><a href="#איך-להוריד-ולטעון-ספריות"><span class="toc-section-number">8.1</span> איך להוריד ולטעון ספריות</a></li>
+<li><a href="#base-r"><span class="toc-section-number">8.2</span> base-r</a></li>
+<li><a href="#מבט-על-כל-הפונקציות-שיש-בכל-ספריה"><span class="toc-section-number">8.3</span> מבט על כל הפונקציות שיש בכל ספריה</a></li>
+<li><a href="#pacman"><span class="toc-section-number">8.4</span> pacman</a></li>
+</ul></li>
+</ul>
+<!--bookdown:toc2:end-->
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">מבוא לתכנות ב R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!--bookdown:toc:end-->
+<!--bookdown:body:start-->
+<div id="על-הספר" class="section level1" number="1">
+<h1 number="1"><span class="header-section-number">1</span> על הספר</h1>
+<p>הספר הזה נועד להיות מבוא בסיסי לתכנות בשפת
+R
+.
+זהו אינו ספר העוסק בניתוח נתונים, ואין לקרוא אותו ככזה. בנוסף זהו אינו ספר אשר מומלץ ללמוד ממנו את אופן החשיבה הנרכש מקורסי מבוא למדעי המחשב. הספר מכוון לתת מבוא קצר, אך מעמיק מספיק לכלים תכנותים בסייסים, אשר בעזרתם ניתן ללמוד בהמשך נושאים תכנותיים מורכבים יותר. לדעתי יש יתרון בלהתחיל ללמוד קודם כל איך לכתוב קוד, אפילו לפני שלומדים כלים סטטיסטים הרלוונטים לניתוח הנתונים עצמו, כי יכולת התכנות הבסיסית עשויה להיות מאיימת ולא מזמינה, אך ברגע שמתחילים ״לשחק״ קצת עם הקוד, והנושא הופך לבהיר, מגלים כמה זה כיף, והתיאבון להמשך הלמידה גודל פלאים.</p>
+<p>קריאה נעימה :)</p>
+<div id="איך-לקרוא-את-הספר-וההדרכות" class="section level2" number="1.1">
+<h2 number="1.1"><span class="header-section-number">1.1</span> איך לקרוא את הספר וההדרכות</h2>
+<p>את הספר אני ממליץ ללמוד פרק אחר פרק, ובמקביל לעבוד עם סקריפט
+R
+פתוח, ולנסות בעצמכם לממש ולייצר וריאציות של מה שמוצג. זוהי הדרך הטובה ביותר ללמוד, ולצבור ניסיון במגוון הדרכים השונות שאפשר לכתוב קוד.</p>
+<p>בנוסף, עבור כל פרק בספר יצורף סרטון ווידאו שבו אעבור על החומר המוצג בספר. ניתן לצפות בסרטון במקביל לקריאה של הספר, עם זו דרך שבה אתם מעדיפים ללמוד.</p>
+</div>
+<div id="יצירת-קשר" class="section level2" number="1.2">
+<h2 number="1.2"><span class="header-section-number">1.2</span> יצירת קשר</h2>
+<p>אם עולות שאלות, או שמצאתם שגיאת כתיב או חוסר דיוק, אשמח לשמוע.
+אפשר ליצור איתי קשר דרך כתובת המייל
+<a href="mailto:ophir.betser@gmail.com" class="email">ophir.betser@gmail.com</a></p>
+<!--chapter:end:index.Rmd-->
+</div>
+</div>
+<div id="מה-היא-שפת-r" class="section level1" number="2">
+<h1 number="2"><span class="header-section-number">2</span> מה היא שפת R?</h1>
+<p>בלה בלה בלה</p>
+<div id="יתרונות-וחסרונות-בשימוש-ב-r" class="section level2" number="2.1">
+<h2 number="2.1"><span class="header-section-number">2.1</span> יתרונות וחסרונות בשימוש ב R</h2>
+<p>בלה בלה בלה</p>
+</div>
+<div id="מדריך-התקנה" class="section level2" number="2.2">
+<h2 number="2.2"><span class="header-section-number">2.2</span> מדריך התקנה</h2>
+<p>בלה בלה בלה</p>
+<!--chapter:end:01-intro.Rmd-->
+</div>
+</div>
+<div id="שימוש-ב-r-בתור-מחשבון" class="section level1" number="3">
+<h1 number="3"><span class="header-section-number">3</span> שימוש ב R בתור מחשבון</h1>
+<p>Placeholder</p>
+<div id="פעולות-חשבון-בסיסיות" class="section level2" number="3.1">
+<h2 number="3.1"><span class="header-section-number">3.1</span> פעולות חשבון בסיסיות</h2>
+</div>
+<div id="פונקציות-סטיסטיות" class="section level2" number="3.2">
+<h2 number="3.2"><span class="header-section-number">3.2</span> פונקציות סטיסטיות</h2>
+<div id="ממוצע" class="section level3" number="3.2.1">
+<h3 number="3.2.1"><span class="header-section-number">3.2.1</span> ממוצע</h3>
+</div>
+<div id="שונות" class="section level3" number="3.2.2">
+<h3 number="3.2.2"><span class="header-section-number">3.2.2</span> שונות</h3>
+</div>
+<div id="סטיית-תקן" class="section level3" number="3.2.3">
+<h3 number="3.2.3"><span class="header-section-number">3.2.3</span> סטיית תקן</h3>
+</div>
+<div id="חציון" class="section level3" number="3.2.4">
+<h3 number="3.2.4"><span class="header-section-number">3.2.4</span> חציון</h3>
+</div>
+</div>
+<div id="קצת-לינארית" class="section level2" number="3.3">
+<h2 number="3.3"><span class="header-section-number">3.3</span> קצת לינארית</h2>
+<!--chapter:end:02-simple_Math.Rmd-->
+</div>
+</div>
+<div id="סוגי-משתנים-אבני-הבניין-שלנו" class="section level1" number="4">
+<h1 number="4"><span class="header-section-number">4</span> סוגי משתנים: אבני הבניין שלנו</h1>
+<p>Placeholder</p>
+<div id="משתנים" class="section level2" number="4.1">
+<h2 number="4.1"><span class="header-section-number">4.1</span> משתנים??</h2>
+</div>
+<div id="integer" class="section level2" number="4.2">
+<h2 number="4.2"><span class="header-section-number">4.2</span> integer</h2>
+</div>
+<div id="numeric" class="section level2" number="4.3">
+<h2 number="4.3"><span class="header-section-number">4.3</span> numeric</h2>
+</div>
+<div id="logical" class="section level2" number="4.4">
+<h2 number="4.4"><span class="header-section-number">4.4</span> logical</h2>
+<div id="טבלאות-אמת" class="section level3" number="4.4.1">
+<h3 number="4.4.1"><span class="header-section-number">4.4.1</span> טבלאות אמת</h3>
+</div>
+<div id="all" class="section level3" number="4.4.2">
+<h3 number="4.4.2"><span class="header-section-number">4.4.2</span> all</h3>
+</div>
+<div id="any" class="section level3" number="4.4.3">
+<h3 number="4.4.3"><span class="header-section-number">4.4.3</span> any</h3>
+</div>
+</div>
+<div id="character" class="section level2" number="4.5">
+<h2 number="4.5"><span class="header-section-number">4.5</span> character</h2>
+<!--chapter:end:03-variable_types.Rmd-->
+</div>
+</div>
+<div id="תנאים" class="section level1" number="5">
+<h1 number="5"><span class="header-section-number">5</span> תנאים</h1>
+<p>Placeholder</p>
+<div id="יש-אנחנו-יכולים-לשאול-את-המחשב-שאלות" class="section level2" number="5.1">
+<h2 number="5.1"><span class="header-section-number">5.1</span> יש! אנחנו יכולים לשאול את המחשב שאלות</h2>
+</div>
+<div id="וריאציות" class="section level2" number="5.2">
+<h2 number="5.2"><span class="header-section-number">5.2</span> וריאציות</h2>
+<div id="ifelse" class="section level3" number="5.2.1">
+<h3 number="5.2.1"><span class="header-section-number">5.2.1</span> ifelse</h3>
+<!--chapter:end:04-ifelse_conditions.Rmd-->
+</div>
+</div>
+</div>
+<div id="לולאות" class="section level1" number="6">
+<h1 number="6"><span class="header-section-number">6</span> לולאות</h1>
+<p>Placeholder</p>
+<div id="for-loops" class="section level2" number="6.1">
+<h2 number="6.1"><span class="header-section-number">6.1</span> for loops</h2>
+</div>
+<div id="while" class="section level2" number="6.2">
+<h2 number="6.2"><span class="header-section-number">6.2</span> while</h2>
+</div>
+<div id="apply" class="section level2" number="6.3">
+<h2 number="6.3"><span class="header-section-number">6.3</span> apply</h2>
+<!--chapter:end:05-loops.Rmd-->
+</div>
+</div>
+<div id="פונקציות" class="section level1" number="7">
+<h1 number="7"><span class="header-section-number">7</span> פונקציות</h1>
+<p>Placeholder</p>
+<div id="למה-לכתוב-פונקציות" class="section level2" number="7.1">
+<h2 number="7.1"><span class="header-section-number">7.1</span> למה לכתוב פונקציות?</h2>
+</div>
+<div id="מגניב-איך-עושים-את-זה" class="section level2" number="7.2">
+<h2 number="7.2"><span class="header-section-number">7.2</span> מגניב, איך עושים את זה?</h2>
+</div>
+<div id="כמה-דוגמאות" class="section level2" number="7.3">
+<h2 number="7.3"><span class="header-section-number">7.3</span> כמה דוגמאות</h2>
+<div id="דוגמא-ראשונה---פונקציה-שמקבלת-משוואה-רבועית-ומחזירה-את-שורשיה" class="section level3" number="7.3.1">
+<h3 number="7.3.1"><span class="header-section-number">7.3.1</span> דוגמא ראשונה - פונקציה שמקבלת משוואה רבועית, ומחזירה את שורשיה</h3>
+</div>
+<div id="דוגמא-שניה" class="section level3" number="7.3.2">
+<h3 number="7.3.2"><span class="header-section-number">7.3.2</span> דוגמא שניה</h3>
+<!--chapter:end:06-functions.Rmd-->
+</div>
+</div>
+</div>
+<div id="ספריות" class="section level1" number="8">
+<h1 number="8"><span class="header-section-number">8</span> ספריות</h1>
+<p>Placeholder</p>
+<div id="איך-להוריד-ולטעון-ספריות" class="section level2" number="8.1">
+<h2 number="8.1"><span class="header-section-number">8.1</span> איך להוריד ולטעון ספריות</h2>
+</div>
+<div id="base-r" class="section level2" number="8.2">
+<h2 number="8.2"><span class="header-section-number">8.2</span> base-r</h2>
+</div>
+<div id="מבט-על-כל-הפונקציות-שיש-בכל-ספריה" class="section level2" number="8.3">
+<h2 number="8.3"><span class="header-section-number">8.3</span> מבט על כל הפונקציות שיש בכל ספריה</h2>
+</div>
+<div id="pacman" class="section level2" number="8.4">
+<h2 number="8.4"><span class="header-section-number">8.4</span> pacman</h2>
+<!--chapter:end:07-packages.Rmd-->
+</div>
+</div>
+<!--bookdown:body:end-->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
+    </div>
+  </div>
+<!--bookdown:config-->
+
+</body>
+
+</html>
