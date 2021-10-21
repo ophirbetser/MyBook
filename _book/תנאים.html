@@ -17,7 +17,7 @@ set in the _output.yml file.</p>" />
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
-  <meta name="github-repo" content="ophirbetser/MyBook" />
+  <meta name="github-repo" content="ophirbetser/MyBook/index.html" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content=" 5 תנאים | מבוא לתכנות ב R" />
@@ -146,6 +146,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> על הספר</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#איך-לקרוא-את-הספר-וההדרכות"><i class="fa fa-check"></i><b>1.1</b> איך לקרוא את הספר וההדרכות</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#יצירת-קשר"><i class="fa fa-check"></i><b>1.2</b> יצירת קשר</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="מה-היא-שפת-r.html"><a href="מה-היא-שפת-r.html"><i class="fa fa-check"></i><b>2</b> מה היא שפת R?</a>
 <ul>
@@ -336,7 +337,7 @@ R
 <p>נניח שיש לי את הוקטור הרנדומלי הבא:</p>
 <div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="תנאים.html#cb72-1" aria-hidden="true" tabindex="-1"></a>rand_v <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">100</span>, <span class="dv">20</span>)</span>
 <span id="cb72-2"><a href="תנאים.html#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(rand_v)</span></code></pre></div>
-<pre><code>##  [1] 13 85 17 12 25 96 67 99 16  4 46 91 30 65 92 89 77 53 54 19</code></pre>
+<pre><code>##  [1] 61 12  5 22 72 40 42 76 77 38 21 88  8 70 50 23 81 37 80 51</code></pre>
 <p>ואני רוצה לשאול עבור כך ערך בנפרד האם הוא זוגי או אי-זוגי - אשתמש בשביל זה בפונקציה<br />
 <code>ifelse</code>. הדרך לכתוב אותה היא כזאת:</p>
 <div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="תנאים.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(<span class="st">&quot;מבחן על וקטור&quot;</span> ,</span>
@@ -347,7 +348,7 @@ R
 <div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb75-1"><a href="תנאים.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(rand_v <span class="sc">%%</span> <span class="dv">2</span> <span class="sc">==</span> <span class="dv">0</span>,</span>
 <span id="cb75-2"><a href="תנאים.html#cb75-2" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;good&quot;</span>,</span>
 <span id="cb75-3"><a href="תנאים.html#cb75-3" aria-hidden="true" tabindex="-1"></a>       <span class="st">&quot;why???&quot;</span>)</span></code></pre></div>
-<pre><code>##  [1] &quot;why???&quot; &quot;why???&quot; &quot;why???&quot; &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;why???&quot; &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;why???&quot;
+<pre><code>##  [1] &quot;why???&quot; &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;why???&quot; &quot;good&quot;   &quot;good&quot;   &quot;good&quot;  
 ## [15] &quot;good&quot;   &quot;why???&quot; &quot;why???&quot; &quot;why???&quot; &quot;good&quot;   &quot;why???&quot;</code></pre>
 <p>הפלט של הפונקציה הוא וקטור, ונוכל כמובן לשמור אותה לשימוש עתידי אם נרצה זאת.</p>
 
@@ -391,7 +392,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ophirbetser/MyBook/edit/BRANCH/04-ifelse_conditions.Rmd",
+"link": "https://github.com/ophirbetser/MyBook//BRANCH/04-ifelse_conditions.Rmd",
 "text": "Edit"
 },
 "history": {
