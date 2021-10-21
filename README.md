@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 Welcome! 
 
 This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). 

@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # לולאות
 
 בשונה משפות תכנות רבות אחרות,
